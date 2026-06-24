@@ -1,0 +1,5 @@
+node_modules
+src/app/components/ui
+src/app/components/figma
+.idea
+
