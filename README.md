@@ -149,7 +149,7 @@ Before committing to a purchase, users can share the product via a dedicated vot
 
 | Product Page | Smart Size Guide | Cart |
 |:---:|:---:|:---:|
-| ![Product](screenshots/product.png) | ![Size Guide](screenshots/  .png) | ![Cart](screenshots/cart.png) |
+| ![Product](screenshots/product.png) | ![Size Guide](screenshots/size-guide.png) | ![Cart](screenshots/cart.png) |
 
 </div>
 
