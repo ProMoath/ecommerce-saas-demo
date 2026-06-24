@@ -2,9 +2,9 @@
 
 <br />
 
-# 🛍️ مَظهر — Mazhar
+# 🛍️ Mazhar — مَظهر
 
-### منصة SaaS ذكية لإنشاء متاجر الملابس الإلكترونية
+### An AI-powered SaaS platform for building smart fashion stores
 
 <br />
 
@@ -12,427 +12,569 @@
 [![Vite](https://img.shields.io/badge/Vite-6.3-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4.1-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![React Router](https://img.shields.io/badge/React_Router-7.17-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com/)
-[![License](https://img.shields.io/badge/License-MIT-emerald?style=for-the-badge)](./LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)](./LICENSE)
 
 <br />
 
-> **مَظهر** هي منصة SaaS متكاملة تُمكّن أصحاب متاجر الملابس من إنشاء متاجرهم الإلكترونية الخاصة في دقائق، مع مجموعة من الأدوات الذكية التي تُحسّن تجربة التسوق وتُقلّل من معدلات الإرجاع.
+> **Mazhar** is a full-featured SaaS platform that empowers fashion retailers and clothing brands to launch their own branded online stores in minutes — complete with AI-powered shopping tools that reduce returns and delight customers.
 
 <br />
 
-![Hero Banner](https://images.unsplash.com/photo-1777458300190-10caf494efe1?w=1200&q=80)
+![Mazhar Hero](https://images.unsplash.com/photo-1777458300190-10caf494efe1?w=1200&q=80)
 
 </div>
 
 ---
 
-## 📑 فهرس المحتويات
+## 📑 Table of Contents
 
-- [✨ نظرة عامة](#-نظرة-عامة)
-- [🚀 الميزات الرئيسية](#-الميزات-الرئيسية)
-- [🧠 الميزات الذكية](#-الميزات-الذكية)
-- [🗂️ بنية المشروع](#️-بنية-المشروع)
-- [🛣️ صفحات التطبيق والمسارات](#️-صفحات-التطبيق-والمسارات)
-- [🔐 نظام المصادقة](#-نظام-المصادقة)
-- [🛒 إدارة عربة التسوق](#-إدارة-عربة-التسوق)
-- [🎨 نظام التصميم](#-نظام-التصميم)
-- [⚙️ المتطلبات والتثبيت](#️-المتطلبات-والتثبيت)
-- [🔧 التقنيات المستخدمة](#-التقنيات-المستخدمة)
-- [📦 بنية الـ Commits](#-بنية-الـ-commits)
-- [🗺️ خارطة الطريق](#️-خارطة-الطريق)
-
----
-
-## ✨ نظرة عامة
-
-**مَظهر** هي منصة SaaS (Software as a Service) متخصصة في قطاع الأزياء والملابس، تتيح لأي بائع أو مصمم إنشاء متجر إلكتروني احترافي بشكل مستقل دون الحاجة إلى خبرة تقنية.
-
-تتميز المنصة بمجموعة فريدة من الأدوات الذكية المدمجة، مثل غرفة القياس الذكية والموديل الافتراضي ومنسّق الأزياء — وكلها تهدف إلى تحسين تجربة التسوق الإلكتروني وتقليل العوائق الشائعة كاختيار المقاس الخاطئ.
-
-### لمن هذه المنصة؟
-
-| الفئة | الاستخدام |
-|-------|-----------|
-| 👗 **أصحاب متاجر الملابس** | إنشاء متجر احترافي وإدارة المنتجات والطلبات |
-| 🎨 **مصممو الأزياء** | عرض تصاميمهم بطريقة تفاعلية ومبتكرة |
-| 🛍️ **المتسوقون** | تجربة ملابس افتراضية واكتشاف المقاس المناسب |
+- [✨ Overview](#-overview)
+- [🚀 Core Features](#-core-features)
+- [🧠 Smart AI Features](#-smart-ai-features)
+- [📸 Screenshots](#-screenshots)
+- [🗂️ Project Structure](#️-project-structure)
+- [🛣️ Pages & Routes](#️-pages--routes)
+- [🔐 Authentication System](#-authentication-system)
+- [🛒 Shopping Cart](#-shopping-cart)
+- [🎨 Design System](#-design-system)
+- [🔒 Security](#-security)
+- [🔍 SEO Optimizations](#-seo-optimizations)
+- [⚙️ Requirements & Installation](#️-requirements--installation)
+- [🔧 Tech Stack](#-tech-stack)
+- [📦 Commit History](#-commit-history)
+- [🗺️ Roadmap](#️-roadmap)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [📞 Contact](#-contact)
 
 ---
 
-## 🚀 الميزات الرئيسية
+## ✨ Overview
 
-### 🏪 إدارة المتجر
-- **إنشاء متجر فوري** — رابط مخصص لكل متجر بصيغة `/shop/:slug`
-- **تخصيص كامل** — شعار، بانر، اسم، وصف، ورقم تواصل
-- **لوحة تحكم شاملة** — إحصائيات المبيعات، الطلبات، والمخزون في مكان واحد
-- **إدارة المنتجات** — إضافة، تعديل، وحذف المنتجات بسهولة
-- **تتبع الطلبات** — متابعة حالة كل طلب (معلق، قيد التنفيذ، تم الشحن، تم التسليم)
+**Mazhar** (مَظهر — Arabic for "appearance/look") is a modern SaaS e-commerce platform built specifically for the fashion and clothing industry. It allows any seller, designer, or brand to spin up a fully featured online store with zero technical knowledge required.
 
-### 🛒 تجربة التسوق
-- **تصفية المنتجات** — بحث بالاسم أو الفئة مع تصفية ديناميكية
-- **عربة التسوق** — إضافة وإزالة المنتجات مع حساب الإجمالي تلقائياً
-- **صفحة المنتج** — عرض تفصيلي مع صور، مقاسات، وسعر قبل وبعد الخصم
-- **إشعارات فورية** — مركز إشعارات متكامل لمتابعة أحداث المتجر
+What makes Mazhar unique is its suite of **intelligent shopping tools** — a Smart Size Guide, Virtual Model, Outfit Matcher, and Friends Vote system — all designed to solve the #1 problem in online fashion: buying the wrong size.
 
-### 📊 لوحة التحكم
-- **إحصائيات لحظية** — عدد المنتجات، الطلبات، الزوار، والإيرادات
-- **مخطط بياني** — تتبع الطلبات الأسبوعية والشهرية
-- **تنبيه المخزون** — تحذير فوري عند اقتراب نفاد المنتجات
-- **آخر الطلبات** — عرض أحدث الطلبات مع حالتها
-- **أفضل المنتجات** — ترتيب المنتجات الأكثر مبيعاً
+### The Problem We Solve
+- **30%** of online clothing purchases are returned due to size mismatch.
+- Small shop owners struggle with managing orders via WhatsApp.
+- No Arabic platform offers a smart clothing shopping experience.
+
+### Who Is It For?
+
+| Audience | Use Case |
+|----------|----------|
+| 👗 **Fashion Store Owners** | Launch a branded store, manage products & track orders |
+| 🎨 **Clothing Designers** | Showcase collections with interactive try-on tools |
+| 🛍️ **Shoppers** | Find perfect sizes and try clothes virtually before buying |
 
 ---
 
-## 🧠 الميزات الذكية
+## 🚀 Core Features
 
-هذا ما يميّز **مَظهر** عن أي منصة تجارة إلكترونية أخرى:
+### 🏪 Store Management
+- **Instant store creation** — Every store gets a unique URL at `/shop/:slug`
+- **Full customization** — Logo, banner, name, bio, and contact info
+- **Comprehensive dashboard** — Sales analytics, order tracking, and inventory in one place
+- **Product management** — Add, edit, and delete products with size tables and images
+- **Order tracking** — Full lifecycle: `pending → processing → shipped → delivered`
+- **Settings persistence** — All store preferences saved to `localStorage`
 
-### 📏 غرفة القياس الذكية — `SmartSizeGuide`
-أداة متقدمة تحلل مقاسات المستخدم الفعلية وتوصي بالمقاس المثالي لكل منتج.
+### 🛒 Shopping Experience
+- **Dynamic filtering** — Real-time search by name or category
+- **Shopping cart** — Add/remove products with quantity controls and total calculation
+- **Product detail page** — Full product view with smart tools, size guide, and pricing
+- **Notifications center** — Real-time alerts for store events and updates
+- **Social voting** — Share products with friends and collect opinions before buying
 
-**كيف تعمل:**
-1. يُدخل المستخدم مقاساته (صدر، خصر، ورك، كتف، ذراع، طول، وزن)
-2. يحدد تفضيل القصة (ضيق / عادي / واسع) وشكل الجسم
-3. يحصل فوراً على توصية المقاس المناسب مع مقارنة بين كل المقاسات المتاحة
+### 📊 Admin Dashboard
+- **Live stats cards** — Product count, daily orders, visitors, and revenue
+- **Bar chart** — Weekly/monthly order trends with a custom-built chart
+- **Low stock alerts** — Instant warning when inventory drops below threshold
+- **Recent orders panel** — Latest orders with customer name, total, and status
+- **Top products list** — Best-performing products ranked by engagement
+- **Quick actions** — One-click shortcuts to add products, review orders, or view store
+
+---
+
+## 🧠 Smart AI Features
+
+This is what truly differentiates Mazhar from every other e-commerce platform:
+
+### 📏 Smart Size Guide — `SmartSizeGuide`
+
+An advanced recommendation engine that analyzes the user's actual body measurements and suggests the perfect size for any product.
+
+**How it works:**
 
 ```
-المدخلات: مقاسات الجسم + تفضيل القصة + شكل الجسم
-     ↓
-خوارزمية المطابقة (chest range matching + preference offset)
-     ↓
-المخرجات: المقاس الموصى به + مقارنة كاملة مع المخزون المتاح
+Input: body measurements (chest, waist, hip, shoulder, arm, height, weight)
+       + fit preference (tight / regular / loose)
+       + body shape (slim / athletic / full)
+            ↓
+Matching Algorithm:
+  1. Find the size where chestFrom ≤ user.chest ≤ chestTo
+  2. Apply preference offset (+1 size for loose, -1 for tight)
+            ↓
+Output: Recommended size + full comparison table + stock availability
 ```
 
-### 👗 منسّق الأزياء — `OutfitMatcher`
-يقترح أطقماً متكاملة ومتناسقة بناءً على المنتج المختار وتفضيلات المستخدم وميزانيته.
+**UI Highlights:**
+- Two-step modal: measurements form → instant result
+- Visual size comparison with "too small" / "too big" indicators per size
+- Displays real-time stock count for each size
+- One-click to auto-select the recommended size
 
-### 🧍 الموديل الافتراضي — `VirtualModel`
-يُظهر كيف سيبدو المنتج على جسم يشبه المستخدم حسب شكل الجسم ولون البشرة — تجربة تسوق بصرية فريدة.
+### 👗 Outfit Matcher — `OutfitMatcher`
 
-### 👍 تصويت الأصدقاء — `ShareVote`
-قبل أن تشتري، شارك المنتج مع أصدقائك واجمع آراءهم عبر رابط تصويت مخصص لكل منتج (`/vote/:productId`).
+Suggests complete, coordinated outfits based on the selected product, user style preferences, and budget.
+
+### 🧍 Virtual Model — `VirtualModel`
+
+Renders a visual preview of how the product will look on a body matching the user's shape and skin tone — bringing the fitting room online.
+
+### 👍 Friends Vote — `ShareVote`
+
+Before committing to a purchase, users can share the product via a dedicated vote link (`/vote/:productId`). Friends vote thumbs up or down, helping the shopper make a confident decision.
 
 ---
 
-## 🗂️ بنية المشروع
+## 📸 Screenshots
+
+<div align="center">
+
+| Landing Page | Dashboard | Store Front |
+|:---:|:---:|:---:|
+| ![Landing](screenshots/landing.png) | ![Dashboard](screenshots/dashboard.png) | ![Shop](screenshots/shop.png) |
+
+| Product Page | Smart Size Guide | Cart |
+|:---:|:---:|:---:|
+| ![Product](screenshots/product.png) | ![Size Guide](screenshots/  .png) | ![Cart](screenshots/cart.png) |
+
+</div>
+
+> 💡 **Note:** Replace the placeholder images with actual screenshots of your running app.
+
+---
+
+## 🗂️ Project Structure
 
 ```
-E-commerace/
-├── 📄 index.html                    # نقطة الدخول الرئيسية
-├── 📦 package.json                  # تبعيات المشروع
-├── ⚙️  vite.config.js               # إعدادات Vite
-├── 🎨 postcss.config.mjs            # إعدادات PostCSS
+mazhar-ecommerce/
+├── 📄 index.html                     # App entry point
+├── 📦 package.json                   # Dependencies & scripts
+├── ⚙️  vite.config.js                # Vite build configuration
+├── 🎨 postcss.config.mjs             # PostCSS configuration
 │
 └── src/
-    ├── 🚀 main.jsx                  # نقطة تشغيل React
-    ├── 🎨 styles/
-    │   ├── index.css                # الأنماط العامة
-    │   ├── theme.css                # متغيرات الألوان والثيم
-    │   ├── tailwind.css             # استيراد Tailwind
-    │   └── fonts.css                # إعداد الخطوط (Cairo)
+    ├── 🚀 main.jsx                   # React bootstrap + router mount
+    │
+    ├── styles/
+    │   ├── index.css                 # Global base styles
+    │   ├── theme.css                 # CSS custom properties (colors, spacing)
+    │   ├── tailwind.css              # Tailwind directives
+    │   └── fonts.css                 # Cairo font import
     │
     └── app/
-        ├── 📱 App.jsx               # المكوّن الجذري مع مزودي السياق
-        ├── 🛣️  routes.jsx            # تعريف جميع مسارات التطبيق
+        ├── 📱 App.jsx                # Root component with context providers
+        ├── 🛣️  routes.jsx             # Centralized route definitions
         │
-        ├── 📂 contexts/             # إدارة الحالة العامة
-        │   ├── AuthContext.jsx      # مصادقة المستخدمين (Login/Register/Profile)
-        │   ├── CartContext.jsx      # حالة عربة التسوق
-        │   └── ThemeContext.jsx     # الوضع الليلي/النهاري
+        ├── contexts/                 # Global state management
+        │   ├── AuthContext.jsx       # Auth: login, register, logout, updateProfile
+        │   ├── CartContext.jsx       # Cart: items, quantities, totals
+        │   └── ThemeContext.jsx      # Dark / light mode toggle
         │
-        ├── 📂 pages/                # صفحات التطبيق الرئيسية
-        │   ├── LandingPage.jsx      # الصفحة الرئيسية (Landing)
-        │   ├── LoginPage.jsx        # تسجيل الدخول
-        │   ├── RegisterPage.jsx     # إنشاء حساب جديد
-        │   ├── ShopPage.jsx         # واجهة المتجر للعملاء
-        │   ├── ProductsPage.jsx     # قائمة المنتجات (داشبورد)
-        │   ├── ProductPage.jsx      # صفحة تفاصيل المنتج
-        │   ├── AddProductPage.jsx   # إضافة/تعديل منتج
-        │   ├── CartPage.jsx         # عربة التسوق
-        │   ├── DashboardPage.jsx    # لوحة التحكم الرئيسية
-        │   ├── OrdersPage.jsx       # إدارة الطلبات
-        │   ├── SettingsPage.jsx     # إعدادات الحساب والمتجر
-        │   ├── NotificationsPage.jsx# مركز الإشعارات
-        │   ├── LocalPage.jsx        # صفحة المتاجر المحلية
-        │   ├── VotePage.jsx         # تصويت الأصدقاء على المنتجات
-        │   └── NotFoundPage.jsx     # صفحة 404
+        ├── pages/                    # Full page components
+        │   ├── LandingPage.jsx       # Hero, features, how it works, reviews, CTA
+        │   ├── LoginPage.jsx         # Email + password login form
+        │   ├── RegisterPage.jsx      # New account creation
+        │   ├── ShopPage.jsx          # Public store with search & category filter
+        │   ├── ProductsPage.jsx      # Dashboard product list table
+        │   ├── ProductPage.jsx       # Product detail + smart tools
+        │   ├── AddProductPage.jsx    # Add / edit product form
+        │   ├── CartPage.jsx          # Cart items + order summary
+        │   ├── DashboardPage.jsx     # Main admin overview
+        │   ├── OrdersPage.jsx        # Order management & status updates
+        │   ├── SettingsPage.jsx      # Profile, store, preferences, images
+        │   ├── NotificationsPage.jsx # Notification center with filters
+        │   ├── LocalPage.jsx         # Local stores directory
+        │   ├── VotePage.jsx          # Friends social voting page
+        │   └── NotFoundPage.jsx      # 404 error page
         │
-        ├── 📂 components/
-        │   ├── shared/              # مكوّنات مشتركة عبر التطبيق
-        │   │   ├── Navbar.jsx                    # شريط التنقل
-        │   │   ├── Footer.jsx                    # تذييل الصفحة
-        │   │   ├── RootLayout.jsx                # الهيكل الخارجي
-        │   │   ├── DashboardLayout.jsx           # هيكل لوحة التحكم
-        │   │   ├── ProductCard.jsx               # بطاقة عرض المنتج
-        │   │   ├── StatCard.jsx                  # بطاقة الإحصائية
-        │   │   ├── ConfirmDialog.jsx             # نافذة تأكيد الإجراءات
-        │   │   ├── EmptyState.jsx                # حالة القائمة الفارغة
-        │   │   ├── LoadingSpinner.jsx            # مؤشر التحميل
-        │   │   └── ProtectedDashboardRoute.jsx  # حماية مسارات الداشبورد
+        ├── components/
+        │   ├── shared/               # Reusable layout & UI components
+        │   │   ├── Navbar.jsx                    # Top navigation bar
+        │   │   ├── Footer.jsx                    # Site footer
+        │   │   ├── RootLayout.jsx                # Public layout wrapper
+        │   │   ├── DashboardLayout.jsx           # Sidebar + content layout
+        │   │   ├── ProductCard.jsx               # Product grid card
+        │   │   ├── StatCard.jsx                  # Dashboard stat widget
+        │   │   ├── ConfirmDialog.jsx             # Action confirmation modal
+        │   │   ├── EmptyState.jsx                # Empty list placeholder
+        │   │   ├── LoadingSpinner.jsx            # Loading indicator
+        │   │   └── ProtectedDashboardRoute.jsx  # Auth guard for /dashboard
         │   │
-        │   └── smart/               # الأدوات الذكية الفريدة
-        │       ├── SmartSizeGuide.jsx  # غرفة القياس الذكية
-        │       ├── OutfitMatcher.jsx   # منسّق الأزياء
-        │       ├── VirtualModel.jsx    # الموديل الافتراضي
-        │       └── ShareVote.jsx       # مشاركة التصويت
+        │   └── smart/                # AI-powered interactive tools
+        │       ├── SmartSizeGuide.jsx  # Body measurement → size recommendation
+        │       ├── OutfitMatcher.jsx   # Outfit suggestion engine
+        │       ├── VirtualModel.jsx    # Virtual try-on preview
+        │       └── ShareVote.jsx       # Social vote sharing UI
         │
-        └── 📂 data/
-            ├── mockData.js             # بيانات تجريبية (منتجات، طلبات، إحصائيات)
-            └── (lib/mockNotifications.js) # بيانات الإشعارات
+        └── data/
+            ├── mockData.js             # Products, orders, stats mock data
+            └── (lib/mockNotifications) # Notification mock data
 ```
 
 ---
 
-## 🛣️ صفحات التطبيق والمسارات
+## 🛣️ Pages & Routes
 
-### المسارات العامة (Public Routes)
+### Public Routes
 
-| المسار | الصفحة | الوصف |
-|--------|--------|-------|
-| `/` | `LandingPage` | الصفحة الرئيسية مع Hero، المميزات، وكيفية الاستخدام |
-| `/login` | `LoginPage` | تسجيل الدخول بالبريد وكلمة المرور |
-| `/register` | `RegisterPage` | إنشاء حساب جديد مع رابط المتجر |
-| `/shop/:slug` | `ShopPage` | واجهة المتجر العامة مع تصفية وبحث |
-| `/shop/:slug/product/:id` | `ProductPage` | تفاصيل المنتج مع الأدوات الذكية |
-| `/cart` | `CartPage` | عربة التسوق |
-| `/notifications` | `NotificationsPage` | مركز إشعارات المتجر |
-| `/local` | `LocalPage` | دليل المتاجر المحلية |
-| `/vote/:productId` | `VotePage` | صفحة تصويت الأصدقاء |
-| `/*` | `NotFoundPage` | صفحة الخطأ 404 |
+| Path | Page | Description |
+|------|------|-------------|
+| `/` | `LandingPage` | Hero section, features, how-it-works, testimonials, CTA |
+| `/login` | `LoginPage` | Sign in with email and password |
+| `/register` | `RegisterPage` | Create a new merchant account |
+| `/shop/:slug` | `ShopPage` | Customer-facing storefront with filtering |
+| `/shop/:slug/product/:id` | `ProductPage` | Product detail with Smart Tools |
+| `/cart` | `CartPage` | Shopping cart and checkout summary |
+| `/notifications` | `NotificationsPage` | Store notification center |
+| `/local` | `LocalPage` | Local stores discovery directory |
+| `/vote/:productId` | `VotePage` | Friends voting on a specific product |
+| `/*` | `NotFoundPage` | Custom 404 error page |
 
-### مسارات لوحة التحكم (Protected Dashboard Routes)
+### Protected Dashboard Routes
 
-> 🔒 جميع هذه المسارات محمية — تستوجب تسجيل الدخول مسبقاً
+> 🔒 All routes below require an authenticated session — enforced by `ProtectedDashboardRoute`
 
-| المسار | الصفحة | الوصف |
-|--------|--------|-------|
-| `/dashboard` | `DashboardPage` | نظرة عامة، إحصائيات، طلبات، ومنتجات |
-| `/dashboard/products` | `ProductsPage` | قائمة إدارة المنتجات |
-| `/dashboard/products/new` | `AddProductPage` | إضافة منتج جديد |
-| `/dashboard/products/:id/edit` | `AddProductPage` | تعديل منتج موجود |
-| `/dashboard/orders` | `OrdersPage` | إدارة ومتابعة الطلبات |
-| `/dashboard/settings` | `SettingsPage` | إعدادات الحساب والمتجر |
+| Path | Page | Description |
+|------|------|-------------|
+| `/dashboard` | `DashboardPage` | Overview: stats, chart, recent orders, top products |
+| `/dashboard/products` | `ProductsPage` | Full product inventory management |
+| `/dashboard/products/new` | `AddProductPage` | Add a new product with sizes & images |
+| `/dashboard/products/:id/edit` | `AddProductPage` | Edit an existing product |
+| `/dashboard/orders` | `OrdersPage` | Order list with status management |
+| `/dashboard/settings` | `SettingsPage` | Profile, store branding, and preferences |
 
 ---
 
-## 🔐 نظام المصادقة
+## 🔐 Authentication System
 
-يعتمد التطبيق على نظام مصادقة كامل مبني بـ React Context API مع التخزين في `localStorage`.
+Built with React Context API and `localStorage` persistence — no backend required to run the demo.
 
-### الميزات:
-
-| الميزة | التفاصيل |
-|--------|----------|
-| **التسجيل** | إنشاء حساب جديد بالاسم، البريد، وكلمة المرور |
-| **تسجيل الدخول** | الدخول بالبريد الإلكتروني مع التحقق من وجود الحساب |
-| **تحديث الملف الشخصي** | تعديل الاسم، البريد، رابط المتجر، رقم التواصل، والصور |
-| **تسجيل الخروج** | مسح جلسة المستخدم من التخزين المحلي |
-| **حماية المسارات** | `ProtectedDashboardRoute` يمنع الوصول للداشبورد بدون تسجيل دخول |
-| **مزامنة البيانات** | تحديثات الملف الشخصي تنعكس فوراً في المتجر |
+| Feature | Details |
+|---------|---------|
+| **Register** | Creates an account with name, email, and password |
+| **Login** | Authenticates by matching stored user email |
+| **Update Profile** | Updates name, email, store slug, phone, bio, avatar, logo, and banner |
+| **Logout** | Clears the current session from `localStorage` |
+| **Route Protection** | `ProtectedDashboardRoute` redirects unauthenticated users to `/login` |
+| **Data Sync** | Profile changes instantly reflect across the store and dashboard |
+| **Persistence** | Session survives page refresh via `localStorage` |
 
 ```jsx
-// مثال على استخدام AuthContext
-const { user, login, register, logout, updateProfile } = useAuth()
+// Usage example
+const { user, login, register, logout, updateProfile, loading } = useAuth()
+
+// Register a new merchant
+await register('Sarah Johnson', 'sarah@store.com', 'password123')
+
+// Update store branding
+await updateProfile({ storeSlug: 'sarahs-boutique', logo: logoUrl })
 ```
 
 ---
 
-## 🛒 إدارة عربة التسوق
+## 🛒 Shopping Cart
 
-تُدار عربة التسوق بالكامل عبر `CartContext` المبني على React Context API.
+Cart state is managed globally via `CartContext` — available on every page.
 
-### العمليات المدعومة:
+### Supported Operations
 
 ```
-إضافة منتج     → addToCart(product, size, quantity)
-إزالة منتج     → removeFromCart(productId)
-تغيير الكمية   → updateQuantity(productId, quantity)
-مسح العربة     → clearCart()
-حساب الإجمالي  → تلقائي عبر useMemo
+addToCart(product, size, quantity)    → Add item to cart
+removeFromCart(productId)             → Remove item entirely
+updateQuantity(productId, newQty)     → Change item quantity
+clearCart()                           → Empty the entire cart
+cartTotal                             → Auto-computed via useMemo
+cartCount                             → Badge counter for Navbar
 ```
 
 ---
 
-## 🎨 نظام التصميم
+## 🎨 Design System
 
-### الألوان الأساسية
+### Color Palette
 
-| اللون | القيمة | الاستخدام |
-|-------|--------|-----------|
-| **Emerald** | `#059669` | اللون الأساسي — أزرار، روابط، تمييزات |
-| **Teal** | `#0d9488` | التدرجات والعناصر الثانوية |
-| **Gray-950** | `#030712` | خلفية الوضع الداكن |
-| **White** | `#ffffff` | خلفية الوضع الفاتح |
+| Token | Value | Usage |
+|-------|-------|-------|
+| **Primary — Emerald** | `#059669` | Buttons, links, highlights, badges |
+| **Secondary — Teal** | `#0d9488` | Gradients, hover states |
+| **Dark BG** | `#030712` (gray-950) | Dark mode background |
+| **Card BG** | `#111827` (gray-900) | Dark mode card surfaces |
+| **Light BG** | `#f9fafb` (gray-50) | Light mode background |
 
-### الخطوط
+### Typography
 
 ```css
-font-family: 'Cairo', sans-serif;  /* الخط الأساسي للنصوص العربية */
+font-family: 'Cairo', sans-serif;
+/* Google Font — supports both Arabic RTL and Latin LTR */
 ```
 
-### نمط التصميم
+### Design Patterns
 
-- **Glassmorphism** — تأثيرات الزجاج الشفاف في هيدر المتجر وبطاقات الإحصائيات
-- **Smooth Gradients** — تدرجات من `emerald → teal → cyan`
-- **Rounded Corners** — `rounded-2xl` و `rounded-3xl` لشكل حديث وناعم
-- **Dark Mode** — دعم كامل للوضع الداكن عبر `ThemeContext`
-- **Responsive Design** — تصميم متجاوب يعمل على جميع أحجام الشاشات
+| Pattern | Where Used |
+|---------|-----------|
+| **Glassmorphism** | Shop header, dashboard stats, floating badges |
+| **Smooth Gradients** | `emerald → teal → cyan` across hero sections |
+| **Large Border Radius** | `rounded-2xl` / `rounded-3xl` for a modern soft feel |
+| **Backdrop Blur** | Store hero card, navbar overlays |
+| **Dark Mode** | Full system-wide dark/light toggle via `ThemeContext` |
+| **Responsive Grid** | 1 → 2 → 4 column layouts adapting to screen size |
+| **Hover Micro-animations** | `-translate-y-1` and `scale-105` on interactive cards |
 
 ---
 
-## ⚙️ المتطلبات والتثبيت
+## 🔒 Security
 
-### المتطلبات الأساسية
+While the current demo uses `localStorage` for simplicity, security best practices are already embedded in the architecture.
+
+| Layer | Current Implementation | Future (with Backend) |
+|-------|------------------------|------------------------|
+| **Authentication** | React Context + localStorage | Supabase Auth / JWT |
+| **Route Protection** | `ProtectedDashboardRoute` component | Same + server-side verification |
+| **Input Validation** | Client-side form validation | Server-side validation via API |
+| **HTTPS** | Enforced in production | Enforced end-to-end |
+| **Data Isolation** | Each store data is isolated in state | Row Level Security (RLS) on database |
+| **Secrets** | No API keys exposed | Environment variables for sensitive keys |
+
+> ⚠️ **Important:** The current version is a **frontend demo**. A production version will include a secure backend with proper encryption, server-side auth, and database policies.
+
+---
+
+## 🔍 SEO Optimizations
+
+The platform is built with search engines and social sharing in mind:
+
+| Optimization | Implementation |
+|--------------|----------------|
+| **Dynamic Title & Meta** | Each page sets its own `<title>` and `<meta>` tags |
+| **Open Graph Tags** | Rich previews when sharing on Facebook, WhatsApp, etc. |
+| **Twitter Cards** | Optimized previews for Twitter/X sharing |
+| **Semantic HTML** | Proper use of `<h1>`, `<h2>`, `<nav>`, `<main>`, `<article>` |
+| **Image Alt Text** | Every product image includes descriptive `alt` text |
+| **Canonical URLs** | Unique, clean URLs for each product and store |
+| **Responsive Design** | Mobile-first, works flawlessly on all devices |
+| **Fast Loading** | Vite code splitting, lazy loading, optimized assets |
+| **PWA Ready** | The app can be installed on mobile devices |
+
+---
+
+## ⚙️ Requirements & Installation
+
+### Prerequisites
 
 - **Node.js** >= 18.0.0
-- **npm** أو **pnpm** أو **yarn**
+- **npm**, **pnpm**, or **yarn**
 
-### خطوات التثبيت
+### Getting Started
 
 ```bash
-# 1. استنسخ المشروع
-git clone https://github.com/your-username/mazhar-ecommerce.git
+# 1. Clone the repository
+git clone https://github.com/ProMoath/ecommerce-saas-demo.git
 cd mazhar-ecommerce
 
-# 2. ثبّت التبعيات
+# 2. Install dependencies
 npm install
-# أو باستخدام pnpm
+# or with pnpm (recommended)
 pnpm install
 
-# 3. شغّل بيئة التطوير
+# 3. Start the development server
 npm run dev
 
-# 4. افتح المتصفح على
+# 4. Open your browser at
 # http://localhost:5173
 ```
 
-### بناء الإنتاج
+### Production Build
 
 ```bash
-# بناء نسخة الإنتاج
+# Build optimized production bundle
 npm run build
 
-# الملفات ستكون في مجلد dist/
+# Output files will be in the /dist directory
 ```
 
-### متغيرات البيئة
+### Environment Variables
 
-لا يتطلب المشروع حالياً أي متغيرات بيئة — جميع البيانات مُحاكاة محلياً.
+No environment variables are required to run the project. All data is currently mocked locally. When connecting a backend, create a `.env` file:
 
----
-
-## 🔧 التقنيات المستخدمة
-
-### الواجهة الأمامية (Frontend)
-
-| التقنية | الإصدار | الاستخدام |
-|---------|---------|-----------|
-| **React** | 18.3.1 | إطار عمل الواجهة الأمامية |
-| **React Router** | 7.17.0 | التنقل بين الصفحات (SPA) |
-| **Vite** | 6.3.5 | أداة البناء والتطوير السريع |
-| **Tailwind CSS** | 4.1.12 | نظام التنسيق والتصميم |
-| **Lucide React** | 0.487.0 | مكتبة الأيقونات |
-
-### مكتبات UI
-
-| المكتبة | الإصدار | الاستخدام |
-|---------|---------|-----------|
-| **Radix UI** | متعددة | مكوّنات UI قابلة للوصول |
-| **MUI (Material UI)** | 7.3.5 | عناصر واجهة إضافية |
-| **shadcn/ui** | - | مكوّنات مُصمَّمة مسبقاً |
-| **Recharts** | 2.15.2 | مخططات بيانية في الداشبورد |
-| **Motion** | 12.23.24 | رسوم متحركة سلسة |
-| **Sonner** | 2.0.3 | إشعارات Toast |
-| **Embla Carousel** | 8.6.0 | عارض الصور الدوّار |
-
-### أدوات مساعدة
-
-| الأداة | الاستخدام |
-|--------|-----------|
-| **React Hook Form** | إدارة النماذج |
-| **date-fns** | معالجة التواريخ |
-| **clsx + tailwind-merge** | دمج أسماء الـ CSS بشكل ذكي |
-| **canvas-confetti** | تأثيرات احتفالية |
-| **React DnD** | السحب والإفلات |
-| **class-variance-authority** | إدارة المتغيرات في المكوّنات |
-
----
-
-## 📦 بنية الـ Commits
-
-يتبع المشروع [Conventional Commits](https://www.conventionalcommits.org/) لتاريخ git منظم وقابل للقراءة:
-
-```
-c7bc79e  chore: initial project setup with Vite, React, and dependencies
-600b4bf  feat: add global styles, theme tokens, fonts, and Tailwind setup
-207bcb0  feat(auth): add login, register pages, AuthContext, and protected route guard
-43f634d  feat(ui): add shared components - Navbar, Footer, Layouts, ProductCard, StatCard, ThemeContext
-22e8ff4  feat(shop): add shop page, products listing, and product detail page with mock data
-95a7d04  feat(cart): add shopping cart page and CartContext for state management
-d226f86  feat(dashboard): add admin dashboard with analytics and add product management page
-3d0506e  feat(orders): add orders management page with tracking and status display
-816aeb1  feat(settings): add user settings page with profile, preferences, and theme controls
-35327b5  feat(notifications): add notifications page with real-time alerts and mock notification data
-d01cd37  feat(pages): add landing page, local shop page, and 404 not found page
-64e67a3  feat(smart): add AI-powered features - OutfitMatcher, SmartSizeGuide, VirtualModel, ShareVote
-1ee6df8  feat(routing): add app routes configuration and main App component with context providers
-3dcb126  chore(build): add production build output and test assets
+```env
+VITE_API_URL=https://your-api.com
+VITE_SUPABASE_URL=https://xyz.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key
 ```
 
 ---
 
-## 🗺️ خارطة الطريق
+## 🔧 Tech Stack
 
-### المرحلة الحالية ✅
-- [x] نظام المصادقة الكامل (تسجيل، دخول، خروج، تحديث الملف)
-- [x] واجهة المتجر مع بحث وتصفية ديناميكية
-- [x] لوحة تحكم مع إحصائيات وإدارة منتجات وطلبات
-- [x] عربة التسوق مع إدارة الكميات
-- [x] غرفة القياس الذكية
-- [x] منسّق الأزياء والموديل الافتراضي
-- [x] نظام التصويت الاجتماعي
-- [x] الوضع الداكن الكامل
-- [x] تصميم متجاوب لجميع الشاشات
+### Frontend Core
 
-### المرحلة القادمة 🔜
-- [ ] **Backend & API** — ربط قاعدة بيانات حقيقية (Supabase / Firebase)
-- [ ] **رفع الصور** — تكامل مع Cloudinary أو S3
-- [ ] **الدفع الإلكتروني** — دعم Stripe / PayTabs
-- [ ] **إشعارات واتساب** — إرسال الطلبات عبر WhatsApp Business API
-- [ ] **تحليلات متقدمة** — تقارير تفصيلية ومخططات بيانية
-- [ ] **تطبيق موبايل** — نسخة React Native
-- [ ] **متعدد اللغات** — دعم الإنجليزية والعربية
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **React** | 18.3.1 | UI component framework |
+| **React Router** | 7.17.0 | Client-side routing (SPA) |
+| **Vite** | 6.3.5 | Build tool & dev server |
+| **Tailwind CSS** | 4.1.12 | Utility-first styling |
+| **Lucide React** | 0.487.0 | Icon library |
+
+### UI Component Libraries
+
+| Library | Version | Purpose |
+|---------|---------|---------|
+| **Radix UI** | various | Accessible, unstyled UI primitives |
+| **MUI (Material UI)** | 7.3.5 | Additional UI components |
+| **shadcn/ui** | — | Pre-built styled components |
+| **Recharts** | 2.15.2 | Dashboard charts & graphs |
+| **Motion** | 12.23.24 | Smooth animations |
+| **Sonner** | 2.0.3 | Toast notifications |
+| **Embla Carousel** | 8.6.0 | Product image carousel |
+| **Vaul** | 1.1.2 | Mobile-friendly drawer |
+
+### Utilities & Helpers
+
+| Package | Purpose |
+|---------|---------|
+| **React Hook Form** | Form state management & validation |
+| **date-fns** | Date formatting and manipulation |
+| **clsx + tailwind-merge** | Conditional class name merging |
+| **canvas-confetti** | Celebratory confetti animations |
+| **react-dnd** | Drag-and-drop interactions |
+| **class-variance-authority** | Component variant management |
+| **cmdk** | Command palette component |
+| **next-themes** | Theme persistence & switching |
+| **input-otp** | OTP input component |
+
+### Deployment & Future Backend
+
+| Technology | Purpose |
+|------------|---------|
+| **Vercel** | Frontend hosting (recommended) |
+| **Supabase** | Planned backend (Auth, Database, Storage) |
 
 ---
 
-## 🤝 المساهمة
+## 🗺️ Roadmap
 
-نرحب بأي مساهمة! اتبع هذه الخطوات:
+### Phase 1 — Current ✅
+
+- [x] Full authentication system (register, login, logout, profile update)
+- [x] Public storefront with dynamic search and category filtering
+- [x] Admin dashboard with analytics, product management, and order tracking
+- [x] Shopping cart with quantity management
+- [x] Smart Size Guide with body measurement algorithm
+- [x] Outfit Matcher and Virtual Model components
+- [x] Friends Social Voting system
+- [x] Full dark mode support
+- [x] Fully responsive layout (mobile → desktop)
+
+### Phase 2 — Coming Soon 🔜
+
+- [ ] **Backend & Database** — Supabase or Firebase integration
+- [ ] **Image Uploads** — Cloudinary or AWS S3 for product and store images
+- [ ] **Payment Gateway** — Stripe / PayTabs / HyperPay integration
+- [ ] **WhatsApp Notifications** — Order confirmations via WhatsApp Business API
+- [ ] **Advanced Analytics** — Detailed sales reports and conversion tracking
+- [ ] **Multi-language** — Full Arabic + English i18n support
+- [ ] **Mobile App** — React Native companion app
+
+### Phase 3 — Future Vision 🌟
+
+- [ ] **AI Recommendations** — Personalized product suggestions per shopper
+- [ ] **Subscription Plans** — Free / Pro / Enterprise tiers
+- [ ] **Multi-vendor** — Support for marketplace with multiple sellers
+- [ ] **Inventory Sync** — Real-time stock management across channels
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! To get started:
 
 ```bash
-# 1. Fork المشروع
-# 2. أنشئ فرعاً جديداً
+# 1. Fork the repository on GitHub
+
+# 2. Create a feature branch
 git checkout -b feature/your-feature-name
 
-# 3. طوّر وارفع تغييراتك
-git commit -m "feat: add your feature"
+# 3. Make your changes and commit
+git commit -m "feat: describe your change"
+
+# 4. Push your branch
 git push origin feature/your-feature-name
 
-# 4. افتح Pull Request
+# 5. Open a Pull Request on GitHub
+```
+
+### Commit Convention
+
+Please follow [Conventional Commits](https://www.conventionalcommits.org/):
+
+| Prefix | Usage |
+|--------|-------|
+| `feat` | A new feature |
+| `fix` | A bug fix |
+| `docs` | Documentation changes |
+| `style` | Code formatting (no logic change) |
+| `refactor` | Code refactor without feature change |
+| `chore` | Build process or tooling changes |
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE) — feel free to use, fork, and build on it.
+
+```
+MIT License
+
+Copyright (c) 2026 Moath Alshahari
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions...
 ```
 
 ---
 
-## 📄 الترخيص
+## 📞 Contact
 
-هذا المشروع مرخص بموجب رخصة [MIT](./LICENSE).
+| Channel | Details |
+|---------|---------|
+| 👨‍💻 **Developer** | Moath Alshahari |
+| 📧 **Email** | [moathalshah2023@gmail.com](mailto:moathalshah2023@gmail.com) |
+| 🐙 **GitHub** | [@ProMoath](https://github.com/ProMoath) |
+| 💬 **WhatsApp** | [Message me](https://wa.me/967776186698) |
 
 ---
 
 <div align="center">
 
-صُنع بـ ❤️ وكثير من ☕
+<br />
 
-**[⬆ العودة للأعلى](#️-مَظهر--mazhar)**
+### ⭐ Support the Project
+
+If you find this project useful, please give it a star on GitHub and share it with others!
+
+[![GitHub stars](https://img.shields.io/github/stars/ProMoath/ecommerce-saas-demo?style=social)](https://github.com/ProMoath/ecommerce-saas-demo)
+
+Built with ❤️ and a lot of ☕
+
+**[⬆ Back to Top](#️-mazhar--مَظهر)**
 
 </div>
