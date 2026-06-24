@@ -7,7 +7,7 @@ import { SmartSizeGuide } from '../components/smart/SmartSizeGuide.jsx'
 import { ShareVote } from '../components/smart/ShareVote.jsx'
 import { OutfitMatcher } from '../components/smart/OutfitMatcher.jsx'
 import { VirtualModel } from '../components/smart/VirtualModel.jsx'
-import { ImageWithFallback } from '../components/figma/ImageWithFallback.jsx'
+import { ImageWithFallback } from '../components/shared/ImageWithFallback.jsx'
 
 export function ProductPage() {
   const { id } = useParams()
